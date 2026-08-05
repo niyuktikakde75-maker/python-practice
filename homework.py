@@ -20,31 +20,45 @@
 
 #3
 # create a car class with brand,model and price
-class Car:
-    def __init__(self,brand,model,price):
-        self.brand = brand
-        self.model = model
-        self .price = price     
-    def display(self):
-        print("Brand:", self.brand)  
-        print("Model:", self.model)
-        print("Price:",self.price)
-car1 = Car("TATA","Nexon",900000)
-car2 = Car("Hyundai","Creta",1200000)
+# class Car:
+#     def __init__(self,brand,model,price):
+#         self.brand = brand
+#         self.model = model
+#         self .price = price     
+#     def display(self):
+#         print("Brand:", self.brand)  
+#         print("Model:", self.model)
+#         print("Price:",self.price)
+# car1 = Car("TATA","Nexon",900000)
+# car2 = Car("Hyundai","Creta",1200000)
 
-car1.display()
-print()
-car2.display()
+# car1.display()
+# print()
+# car2.display()
 
 
 #4
 #create an Employee class with a display method
-class Employee:
-    def __init__(self,name,salary):
+# class Employee:
+#     def __init__(self,name,salary):
+#         self.name = name
+#         self.salary = salary
+#     def display(self):
+#         print("emplayee name:",self.name)   
+#         print("employee salary:",self.salary)
+# E1 = Employee("Amit",45000)  
+# E1.display()   
+
+
+
+# 5
+#create a mobile class using a constructor
+class Mobile:
+    def __init__(self,name,price):
         self.name = name
-        self.salary = salary
+        self.price = price
     def display(self):
-        print("emplayee name:",self.name)   
-        print("employee salary:",self.salary)
-E1 = Employee("Amit",45000)  
-E1.display()      
+        print("mobile name:",self.name) 
+        print("maobile price:",self.price)       
+mobile1 = Mobile("Samsumg",20000)
+mobile1.display()        
