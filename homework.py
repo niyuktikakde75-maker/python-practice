@@ -35,3 +35,16 @@ car2 = Car("Hyundai","Creta",1200000)
 car1.display()
 print()
 car2.display()
+
+
+#4
+#create an Employee class with a display method
+class Employee:
+    def __init__(self,name,salary):
+        self.name = name
+        self.salary = salary
+    def display(self):
+        print("emplayee name:",self.name)   
+        print("employee salary:",self.salary)
+E1 = Employee("Amit",45000)  
+E1.display()      
