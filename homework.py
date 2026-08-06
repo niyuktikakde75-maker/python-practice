@@ -120,17 +120,36 @@
 
 #9
 # Create three Object of the person class
-class person:
-    def __init__(self,name,age,city):
-        self.name = name
-        self.age = age  
-        self.city = city
-    def display(self):
-        print(self.name,self.age,self.city) 
-person1 = person("Niyukti",20,"Nagpur")
-person2 =person("Sneha",25,"wardha")
-person3 = person("Rohit",20,"pune")   
+# class person:
+#     def __init__(self,name,age,city):
+#         self.name = name
+#         self.age = age  
+#         self.city = city
+#     def display(self):
+#         print(self.name,self.age,self.city) 
+# person1 = person("Niyukti",20,"Nagpur")
+# person2 =person("Sneha",25,"wardha")
+# person3 = person("Rohit",20,"pune")   
 
-person1.display()
-person2.display()
-person3.display()
+# person1.display()
+# person2.display()
+# person3.display()
+
+
+#10
+#Create a laptop class with brand,RAM,storage and price
+class laptop:
+    def __init__(self,brand,ram,storage,price):
+        self.brand=brand
+        self.ram = ram
+        self.storage = storage
+        self.price = price
+    def display(self):
+        print("Brand:",self.brand)
+        print("RAM:",self.ram)
+        print("storage:",self.storage)
+        print("price:",self.price)
+
+laptop1 = laptop("HP",16,512,65000)
+laptop1.display()
+
