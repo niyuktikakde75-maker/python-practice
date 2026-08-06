@@ -53,12 +53,35 @@
 
 # 5
 #create a mobile class using a constructor
-class Mobile:
-    def __init__(self,name,price):
-        self.name = name
+# class Mobile:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+#     def display(self):
+#         print("mobile name:",self.name) 
+#         print("maobile price:",self.price)       
+# mobile1 = Mobile("Samsumg",20000)
+# mobile1.display()
+
+
+
+#6
+#create a Book class and take information from user
+class Book:
+    def __init__(self,title,author,price):
+        self.title = title
+        self.author= author
         self.price = price
     def display(self):
-        print("mobile name:",self.name) 
-        print("maobile price:",self.price)       
-mobile1 = Mobile("Samsumg",20000)
-mobile1.display()        
+        print("/n")   
+        print("title:",self.title) 
+        print("author name:",self.author)
+        print("price:",self.price)
+title =input("enter book title:")   
+author =input("enter author name:")  
+price =input("enter price name:") 
+
+book1 = Book(title,author,price)
+book1.display()
+
+        
