@@ -106,15 +106,31 @@
 
 #8
 #Calculate the area and circumferences of Circle
-class circle:
-    def __init__(self,radius):
-        self.radius = radius
-    def area(self):
-        return 3.14 * self.radius * self.radius
-    def circumferences(self):
-        return 2 * 3.13 * self.radius * self.radius  
-circle1 = circle(7)
-print("Area:",circle1.area())     
-print("Circumferences:",circle1.circumferences())  
+# class circle:
+#     def __init__(self,radius):
+#         self.radius = radius
+#     def area(self):
+#         return 3.14 * self.radius * self.radius
+#     def circumferences(self):
+#         return 2 * 3.13 * self.radius * self.radius  
+# circle1 = circle(7)
+# print("Area:",circle1.area())     
+# print("Circumferences:",circle1.circumferences())  
 
-        
+
+#9
+# Create three Object of the person class
+class person:
+    def __init__(self,name,age,city):
+        self.name = name
+        self.age = age  
+        self.city = city
+    def display(self):
+        print(self.name,self.age,self.city) 
+person1 = person("Niyukti",20,"Nagpur")
+person2 =person("Sneha",25,"wardha")
+person3 = person("Rohit",20,"pune")   
+
+person1.display()
+person2.display()
+person3.display()
