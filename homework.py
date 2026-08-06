@@ -88,18 +88,33 @@
 
 #7
 #calculate the area and perimeter of a rectangle
-class Rectangle:
-    def __init__(self,length,width):
-        self.length = length
-        self.width = width
+# class Rectangle:
+#     def __init__(self,length,width):
+#         self.length = length
+#         self.width = width
+#     def area(self):
+#         return self.length*self.width
+#     def perimeter(self):   
+#         return 2 *(self.length + self.width)
+
+# rectangle1 = Rectangle(10,5)
+
+# print("area:",rectangle1.area())
+# print("perimeter:",rectangle1.perimeter())
+
+
+
+#8
+#Calculate the area and circumferences of Circle
+class circle:
+    def __init__(self,radius):
+        self.radius = radius
     def area(self):
-        return self.length*self.width
-    def perimeter(self):   
-        return 2 *(self.length + self.width)
-
-rectangle1 = Rectangle(10,5)
-
-print("area:",rectangle1.area())
-print("perimeter:",rectangle1.perimeter())
+        return 3.14 * self.radius * self.radius
+    def circumferences(self):
+        return 2 * 3.13 * self.radius * self.radius  
+circle1 = circle(7)
+print("Area:",circle1.area())     
+print("Circumferences:",circle1.circumferences())  
 
         
