@@ -67,21 +67,39 @@
 
 #6
 #create a Book class and take information from user
-class Book:
-    def __init__(self,title,author,price):
-        self.title = title
-        self.author= author
-        self.price = price
-    def display(self):
-        print("/n")   
-        print("title:",self.title) 
-        print("author name:",self.author)
-        print("price:",self.price)
-title =input("enter book title:")   
-author =input("enter author name:")  
-price =input("enter price name:") 
+# class Book:
+#     def __init__(self,title,author,price):
+#         self.title = title
+#         self.author= author
+#         self.price = price
+#     def display(self):
+#         print("/n")   
+#         print("title:",self.title) 
+#         print("author name:",self.author)
+#         print("price:",self.price)
+# title =input("enter book title:")   
+# author =input("enter author name:")  
+# price =input("enter price name:") 
 
-book1 = Book(title,author,price)
-book1.display()
+# book1 = Book(title,author,price)
+# book1.display()
+
+
+
+#7
+#calculate the area and perimeter of a rectangle
+class Rectangle:
+    def __init__(self,length,width):
+        self.length = length
+        self.width = width
+    def area(self):
+        return self.length*self.width
+    def perimeter(self):   
+        return 2 *(self.length + self.width)
+
+rectangle1 = Rectangle(10,5)
+
+print("area:",rectangle1.area())
+print("perimeter:",rectangle1.perimeter())
 
         
