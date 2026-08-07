@@ -1,3 +1,4 @@
+#section 1:Basic Class and Object Project
 #1
 #create a class named student and create one object
 # class student:
@@ -138,18 +139,51 @@
 
 #10
 #Create a laptop class with brand,RAM,storage and price
-class laptop:
-    def __init__(self,brand,ram,storage,price):
-        self.brand=brand
-        self.ram = ram
-        self.storage = storage
-        self.price = price
-    def display(self):
-        print("Brand:",self.brand)
-        print("RAM:",self.ram)
-        print("storage:",self.storage)
-        print("price:",self.price)
+# class laptop:
+#     def __init__(self,brand,ram,storage,price):
+#         self.brand=brand
+#         self.ram = ram
+#         self.storage = storage
+#         self.price = price
+#     def display(self):
+#         print("Brand:",self.brand)
+#         print("RAM:",self.ram)
+#         print("storage:",self.storage)
+#         print("price:",self.price)
 
-laptop1 = laptop("HP",16,512,65000)
-laptop1.display()
+# laptop1 = laptop("HP",16,512,65000)
+# laptop1.display()
+
+
+
+#Section 2: Intermediate Object Oriented Programming
+#11
+#Create a bank account with deposite and withdrawal method
+class BankAccount:
+    def __init__(self,account_holder,balance =0):
+        self.account_holder = account_holder
+        self.balance = balance
+    def deposite(self , amount):
+        if amount > 0:
+            self.balance +=amount
+            print(amount,"deposite successfully")
+        else:
+            print("Deposite amount must be positive")
+    def withdraw(self , amount):
+        if amount <=0:
+            print("withdrawal must e positive")
+        elif amount > self.balance:
+            print("insufficinet amount")
+        else:
+            self.balance-=amount
+            print(amount,"withdrawal successfully")    
+    def display_balance(self):
+        print("Account holder",self.account_holder) 
+        print("Current balance",self.balance) 
+
+account1 = BankAccount("amit",5000)
+account1.deposite(1000)
+account1.withdraw(2000)
+account1.display_balance()
+
 
