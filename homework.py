@@ -189,22 +189,41 @@
 
 #12
 #Create a calculator using class method
-class Calculator:
-    def add(self,number1,number2):
-        return number1 + number2
-    def substract(self,number1,number2):
-        return number1 - number2
-    def multiply(self,number1,number2):
-        return number1 * number2
-    def division(self,number1,number2):
-        if number2 == 0:
-            return "Division by zero is not allowed"
-        else:
-            return number1 / number2
+# class Calculator:
+#     def add(self,number1,number2):
+#         return number1 + number2
+#     def substract(self,number1,number2):
+#         return number1 - number2
+#     def multiply(self,number1,number2):
+#         return number1 * number2
+#     def division(self,number1,number2):
+#         if number2 == 0:
+#             return "Division by zero is not allowed"
+#         else:
+#             return number1 / number2
 
-calculator = Calculator()   
-print("Addition:",calculator.add(10,5)) 
-print("Substraction:",calculator.substract(10,2))
-print("Multiplication:",calculator.multiply(2,2))
-print("Division:",calculator.division(2,10))       
+# calculator = Calculator()   
+# print("Addition:",calculator.add(10,5)) 
+# print("Substraction:",calculator.substract(10,2))
+# print("Multiplication:",calculator.multiply(2,2))
+# print("Division:",calculator.division(2,10))       
 
+
+
+#13
+# Calculate the Total Cost of a product
+class product:
+    def __init__(self,name,price,quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+    def total_cost(self):
+        return self.price * self.quantity
+
+    def display(self):
+        print("Product name:",self.name)
+        print("Price:",self.price)
+        print("quantity:",self.quantity)  
+        print("total Cost",self.total_cost())  
+product1 = product("keyboard",900,3)
+product1.display()
