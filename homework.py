@@ -159,31 +159,52 @@
 #Section 2: Intermediate Object Oriented Programming
 #11
 #Create a bank account with deposite and withdrawal method
-class BankAccount:
-    def __init__(self,account_holder,balance =0):
-        self.account_holder = account_holder
-        self.balance = balance
-    def deposite(self , amount):
-        if amount > 0:
-            self.balance +=amount
-            print(amount,"deposite successfully")
-        else:
-            print("Deposite amount must be positive")
-    def withdraw(self , amount):
-        if amount <=0:
-            print("withdrawal must e positive")
-        elif amount > self.balance:
-            print("insufficinet amount")
-        else:
-            self.balance-=amount
-            print(amount,"withdrawal successfully")    
-    def display_balance(self):
-        print("Account holder",self.account_holder) 
-        print("Current balance",self.balance) 
+# class BankAccount:
+#     def __init__(self,account_holder,balance =0):
+#         self.account_holder = account_holder
+#         self.balance = balance
+#     def deposite(self , amount):
+#         if amount > 0:
+#             self.balance +=amount
+#             print(amount,"deposite successfully")
+#         else:
+#             print("Deposite amount must be positive")
+#     def withdraw(self , amount):
+#         if amount <=0:
+#             print("withdrawal must e positive")
+#         elif amount > self.balance:
+#             print("insufficinet amount")
+#         else:
+#             self.balance-=amount
+#             print(amount,"withdrawal successfully")    
+#     def display_balance(self):
+#         print("Account holder",self.account_holder) 
+#         print("Current balance",self.balance) 
 
-account1 = BankAccount("amit",5000)
-account1.deposite(1000)
-account1.withdraw(2000)
-account1.display_balance()
+# account1 = BankAccount("amit",5000)
+# account1.deposite(1000)
+# account1.withdraw(2000)
+# account1.display_balance()
 
+
+#12
+#Create a calculator using class method
+class Calculator:
+    def add(self,number1,number2):
+        return number1 + number2
+    def substract(self,number1,number2):
+        return number1 - number2
+    def multiply(self,number1,number2):
+        return number1 * number2
+    def division(self,number1,number2):
+        if number2 == 0:
+            return "Division by zero is not allowed"
+        else:
+            return number1 / number2
+
+calculator = Calculator()   
+print("Addition:",calculator.add(10,5)) 
+print("Substraction:",calculator.substract(10,2))
+print("Multiplication:",calculator.multiply(2,2))
+print("Division:",calculator.division(2,10))       
 
