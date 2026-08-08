@@ -299,27 +299,50 @@
 
 #17
 # calculate the empolyee Salary with HRA and DA
-class Employee:
-    def __init__(self,name,basic_salary):
-        self.name = name 
-        self.basic_salary = basic_salary
-    def hra(self):
-        return self.basic_salary * 0.20
+# class Employee:
+#     def __init__(self,name,basic_salary):
+#         self.name = name 
+#         self.basic_salary = basic_salary
+#     def hra(self):
+#         return self.basic_salary * 0.20
 
-    def da(self):
-        return self.basic_salary * 0.10
+#     def da(self):
+#         return self.basic_salary * 0.10
 
-    def total(self):
-        return self.basic_salary + self.hra() + self.da() 
+#     def total(self):
+#         return self.basic_salary + self.hra() + self.da() 
 
-    def display(self):
-        print("Employee:",self.name)
-        print("Basic Salary:",self.basic_salary)
-        print("HRA:",self.hra()) 
-        print("DA:",self.da())
-        print("Total salary:",self.total()) 
+#     def display(self):
+#         print("Employee:",self.name)
+#         print("Basic Salary:",self.basic_salary)
+#         print("HRA:",self.hra()) 
+#         print("DA:",self.da())
+#         print("Total salary:",self.total()) 
 
-employee1 = Employee("Amit",40000)
-employee1.display()        
+# employee1 = Employee("Amit",40000)
+# employee1.display()        
        
+
+
+# #18
+# calculate an electicity bill using consumed units.
+class ElectricityBill():
+    def __init__(self,customer_name,units):
+        self.customer_name = customer_name
+        self.units = units
+    def calculate_bill(self):
+        if self.units <= 100:
+            return self.units*2
+        elif self.units <= 200:
+            return (100 * 2)+((self.units - 100)*3)
+        return (100 * 2)+(100 * 3)+((self.units - 200)*5)
+    def display(self):
+        print("Customer Name:",self.customer_name)
+        print("Consumed Units:",self.units)
+        print("Electricity Bill:",self.calculate_bill())
+
+bill1 = ElectricityBill("Rohit",250)
+bill1.display()        
+
+        
         
