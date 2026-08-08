@@ -211,7 +211,7 @@
 
 
 #13
-# Calculate the Total Cost of a product
+# Calculate the Total Cost of a product.
 # class product:
 #     def __init__(self,name,price,quantity):
 #         self.name = name
@@ -230,34 +230,45 @@
 
 
 #14
-#Calculate total,percetage,grade of a student
-class Student:
-    def __init__(self,name,marks):
-        self.name = name
-        self.marks = marks
-    def total(self):
-        return sum(self.marks)
-    def percentage(self):
-        return self.total()/len(self.marks) 
-    def grade(self):
-        self.percentage = self.percentage()
-        if self.percentage >= 90:
-            return "A+"
-        elif self.percentage >=75:
-            return "A"
-        elif self.percentage >=60:
-            return "B"
-        elif self.percentage >=40:
-            return "C"
-        return "fail"
-    def dispaly_result(self):
-        print("Student Name:",self.name)
-        print("Total Marks:",self.total())
-        print("percentage:",self.percentage())
-        print("Grade:",self.grade())
+#Calculate total,percetage,grade of a student.
+# class Student:
+#     def __init__(self,name,marks):
+#         self.name = name
+#         self.marks = marks
+#     def total(self):
+#         return sum(self.marks)
+#     def percentage(self):
+#         return self.total()/len(self.marks) 
+#     def grade(self):
+#         self.percentage = self.percentage()
+#         if self.percentage >= 90:
+#             return "A+"
+#         elif self.percentage >=75:
+#             return "A"
+#         elif self.percentage >=60:
+#             return "B"
+#         elif self.percentage >=40:
+#             return "C"
+#         return "fail"
+#     def dispaly_result(self):
+#         print("Student Name:",self.name)
+#         print("Total Marks:",self.total())
+#         print("percentage:",self.percentage())
+#         print("Grade:",self.grade())
 
-student1 = Student("Niyukti",[80,90,78,88,92])  
-student1.dispaly_result()      
-          
+# student1 = Student("Niyukti",[80,90,78,88,92])  
+# student1.dispaly_result() 
+
+
+#15
+# Convert temperature using a class.
+class Temperature:
+     def celsius_to_fahrenheit(self,celsius):
+          return (celsius * 9/5)+32
+     def fahrenheit_to_celsius(self,fahrenheit):
+          return(fahrenheit - 32)*5/9
+temperature = Temperature() 
+print("fahrenheit:",temperature.celsius_to_fahrenheit(30))
+print("Celsius:",temperature.fahrenheit_to_celsius(86))    
 
 
