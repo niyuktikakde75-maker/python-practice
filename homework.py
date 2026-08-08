@@ -274,23 +274,52 @@
 # 
 # #16
 # Create a simple shopping cart
-class Shoppingcart():
-    def __init__(self) :
-        self.product=[]
-    def add_product(self,name,price):
-        self.product.append({"name":name,"price":price})
-        self.name = name
-        self.price = price  
-    def display_cart(self):
-        total = 0
-        print("\n Shopping Cart")
-        for product in self.product: 
-            print(product["name"],"-",product["price"])   
-            total += product["price"]
-        print("total Bill:",total)      
+# class Shoppingcart():
+#     def __init__(self) :
+#         self.product=[]
+#     def add_product(self,name,price):
+#         self.product.append({"name":name,"price":price})
+#         self.name = name
+#         self.price = price  
+#     def display_cart(self):
+#         total = 0
+#         print("\n Shopping Cart")
+#         for product in self.product: 
+#             print(product["name"],"-",product["price"])   
+#             total += product["price"]
+#         print("total Bill:",total)      
 
-cart =Shoppingcart()
-cart.add_product("Mouse",500)
-cart.add_product("keyboard",1000)
-cart.add_product("headphone",1500)
-cart.display_cart()
+# cart =Shoppingcart()
+# cart.add_product("Mouse",500)
+# cart.add_product("keyboard",1000)
+# cart.add_product("headphone",1500)
+# cart.display_cart()
+
+
+
+#17
+# calculate the empolyee Salary with HRA and DA
+class Employee:
+    def __init__(self,name,basic_salary):
+        self.name = name 
+        self.basic_salary = basic_salary
+    def hra(self):
+        return self.basic_salary * 0.20
+
+    def da(self):
+        return self.basic_salary * 0.10
+
+    def total(self):
+        return self.basic_salary + self.hra() + self.da() 
+
+    def display(self):
+        print("Employee:",self.name)
+        print("Basic Salary:",self.basic_salary)
+        print("HRA:",self.hra()) 
+        print("DA:",self.da())
+        print("Total salary:",self.total()) 
+
+employee1 = Employee("Amit",40000)
+employee1.display()        
+       
+        
