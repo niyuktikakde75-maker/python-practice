@@ -262,13 +262,35 @@
 
 #15
 # Convert temperature using a class.
-class Temperature:
-     def celsius_to_fahrenheit(self,celsius):
-          return (celsius * 9/5)+32
-     def fahrenheit_to_celsius(self,fahrenheit):
-          return(fahrenheit - 32)*5/9
-temperature = Temperature() 
-print("fahrenheit:",temperature.celsius_to_fahrenheit(30))
-print("Celsius:",temperature.fahrenheit_to_celsius(86))    
+# class Temperature:
+#      def celsius_to_fahrenheit(self,celsius):
+#           return (celsius * 9/5)+32
+#      def fahrenheit_to_celsius(self,fahrenheit):
+#           return(fahrenheit - 32)*5/9
+# temperature = Temperature() 
+# print("fahrenheit:",temperature.celsius_to_fahrenheit(30))
+# print("Celsius:",temperature.fahrenheit_to_celsius(86))   
+# 
+# 
+# #16
+# Create a simple shopping cart
+class Shoppingcart():
+    def __init__(self) :
+        self.product=[]
+    def add_product(self,name,price):
+        self.product.append({"name":name,"price":price})
+        self.name = name
+        self.price = price  
+    def display_cart(self):
+        total = 0
+        print("\n Shopping Cart")
+        for product in self.product: 
+            print(product["name"],"-",product["price"])   
+            total += product["price"]
+        print("total Bill:",total)      
 
-
+cart =Shoppingcart()
+cart.add_product("Mouse",500)
+cart.add_product("keyboard",1000)
+cart.add_product("headphone",1500)
+cart.display_cart()
