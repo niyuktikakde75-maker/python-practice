@@ -350,17 +350,35 @@
 
 #19
 # Calculate a movie ticket bill.
-class MovieTicket:
-    def __init__(self,movie_name,ticket_price,number_of_tickets):
-        self.movie_name = movie_name
-        self.ticket_price = ticket_price
-        self.number_of_ticket = number_of_tickets
-    def total_price(self):
-        return self.ticket_price * self.number_of_tickets
-    def display(self):
-        print("Movie Name:",self.movie_name)
-        print("Ticket price:",self.ticket_price)
-        print("Number of Tickets:",self.number_of_ticket)
+# class MovieTicket:
+#     def __init__(self,movie_name,ticket_price,number_of_tickets):
+#         self.movie_name = movie_name
+#         self.ticket_price = ticket_price
+#         self.number_of_ticket = number_of_tickets
+#     def total_price(self):
+#         return self.ticket_price * self.number_of_tickets
+#     def display(self):
+#         print("Movie Name:",self.movie_name)
+#         print("Ticket price:",self.ticket_price)
+#         print("Number of Tickets:",self.number_of_ticket)
 
-booking1 = MovieTicket("Avengers",250,4)
-booking1.display()            
+# booking1 = MovieTicket("Avengers",250,4)
+# booking1.display()            
+
+
+
+
+
+#20
+# Display time in HH:MM:SS format.
+class Time:
+    def __init__(self,hours,minutes,seconds):
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
+    def display(self):
+        print(f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}")
+
+time1 = Time(9,5,7)
+time1.display()        
+
