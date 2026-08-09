@@ -326,23 +326,41 @@
 
 # #18
 # calculate an electicity bill using consumed units.
-class ElectricityBill():
-    def __init__(self,customer_name,units):
-        self.customer_name = customer_name
-        self.units = units
-    def calculate_bill(self):
-        if self.units <= 100:
-            return self.units*2
-        elif self.units <= 200:
-            return (100 * 2)+((self.units - 100)*3)
-        return (100 * 2)+(100 * 3)+((self.units - 200)*5)
+# class ElectricityBill():
+#     def __init__(self,customer_name,units):
+#         self.customer_name = customer_name
+#         self.units = units
+#     def calculate_bill(self):
+#         if self.units <= 100:
+#             return self.units*2
+#         elif self.units <= 200:
+#             return (100 * 2)+((self.units - 100)*3)
+#         return (100 * 2)+(100 * 3)+((self.units - 200)*5)
+#     def display(self):
+#         print("Customer Name:",self.customer_name)
+#         print("Consumed Units:",self.units)
+#         print("Electricity Bill:",self.calculate_bill())
+
+# bill1 = ElectricityBill("Rohit",250)
+# bill1.display()        
+
+        
+
+
+
+#19
+# Calculate a movie ticket bill.
+class MovieTicket:
+    def __init__(self,movie_name,ticket_price,number_of_tickets):
+        self.movie_name = movie_name
+        self.ticket_price = ticket_price
+        self.number_of_ticket = number_of_tickets
+    def total_price(self):
+        return self.ticket_price * self.number_of_tickets
     def display(self):
-        print("Customer Name:",self.customer_name)
-        print("Consumed Units:",self.units)
-        print("Electricity Bill:",self.calculate_bill())
+        print("Movie Name:",self.movie_name)
+        print("Ticket price:",self.ticket_price)
+        print("Number of Tickets:",self.number_of_ticket)
 
-bill1 = ElectricityBill("Rohit",250)
-bill1.display()        
-
-        
-        
+booking1 = MovieTicket("Avengers",250,4)
+booking1.display()            
