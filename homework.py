@@ -371,14 +371,38 @@
 
 #20
 # Display time in HH:MM:SS format.
-class Time:
-    def __init__(self,hours,minutes,seconds):
-        self.hours = hours
-        self.minutes = minutes
-        self.seconds = seconds
+# class Time:
+#     def __init__(self,hours,minutes,seconds):
+#         self.hours = hours
+#         self.minutes = minutes
+#         self.seconds = seconds
+#     def display(self):
+#         print(f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}")
+
+# time1 = Time(9,5,7)
+# time1.display()        
+
+
+
+
+#Section 3:program using Multiple Objects
+#21
+#Store and display the details of five students
+class Students:
+    def __init__(self,roll_number,name,marks):
+        self.roll_number = roll_number
+        self.name = name
+        self.marks = marks
     def display(self):
-        print(f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}")
+        print(self.roll_number,self.name,self.marks)
 
-time1 = Time(9,5,7)
-time1.display()        
+Student =[
+    Students(1,"Amit",85),
+    Students(2,"Sneha",90),
+    Students(3,"Pooja",75),
+    Students(4,"sumit",88),
+    Students(5,"Rohan",80)
 
+]
+for Students in Student:
+    Students.display()            
