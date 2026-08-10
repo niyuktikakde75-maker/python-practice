@@ -388,21 +388,38 @@
 #Section 3:program using Multiple Objects
 #21
 #Store and display the details of five students
-class Students:
-    def __init__(self,roll_number,name,marks):
-        self.roll_number = roll_number
+# class Students:
+#     def __init__(self,roll_number,name,marks):
+#         self.roll_number = roll_number
+#         self.name = name
+#         self.marks = marks
+#     def display(self):
+#         print(self.roll_number,self.name,self.marks)
+
+# Student =[
+#     Students(1,"Amit",85),
+#     Students(2,"Sneha",90),
+#     Students(3,"Pooja",75),
+#     Students(4,"sumit",88),
+#     Students(5,"Rohan",80)
+
+# ]
+# for Students in Student:
+#     Students.display()   
+# 
+# 
+# 
+# 22
+# Find the most expensive product among multiple objects.
+class Product:
+    def __init__(self,name,price):
         self.name = name
-        self.marks = marks
-    def display(self):
-        print(self.roll_number,self.name,self.marks)
-
-Student =[
-    Students(1,"Amit",85),
-    Students(2,"Sneha",90),
-    Students(3,"Pooja",75),
-    Students(4,"sumit",88),
-    Students(5,"Rohan",80)
-
-]
-for Students in Student:
-    Students.display()            
+        self.price = price
+products=[
+    Product("Mouse:",500),
+    Product("Keyboard:",1500),
+    Product("Monitor:",15000)
+]  
+expensive_product = max(products, key=lambda product : product.price)
+print("Most Expensive Product:",expensive_product.name)
+print("Price:",expensive_product.price)
