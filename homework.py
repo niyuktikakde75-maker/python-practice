@@ -466,15 +466,33 @@
 
 #25
 #Find the player with the heighest score.
-class player:
-    def __init__(self,name,score):
+# class player:
+#     def __init__(self,name,score):
+#         self.name = name
+#         self.score = score
+# players =[
+#     player("Virat",95),
+#     player("Rohit",120),
+#     player("Rahul",80)
+# ] 
+# Highest_score = max(players, key = lambda Players : Players.score)
+# print("Top Player:",Highest_score.name)  
+# print("Highest score:",Highest_score.score)     
+
+
+
+#26
+#Compare the price of two mobile objcts.
+class Mobile:
+    def __init__(self,name,price):
         self.name = name
-        self.score = score
-players =[
-    player("Virat",95),
-    player("Rohit",120),
-    player("Rahul",80)
-] 
-Highest_score = max(players, key = lambda Players : Players.score)
-print("Top Player:",Highest_score.name)  
-print("Highest score:",Highest_score.score)     
+        self.price = price
+mobile1 = Mobile("Samsung",30000)
+mobile2 = Mobile("Onepluse",35000)
+
+if mobile1.price > mobile2.price:
+    print(mobile1.name ,"is more expansive")
+elif mobile2.price > mobile1.price:
+    print(mobile2.name,"is more expansive")
+else:
+    print("both mobile are of same price")        
