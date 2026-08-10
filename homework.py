@@ -411,15 +411,32 @@
 # 
 # 22
 # Find the most expensive product among multiple objects.
-class Product:
-    def __init__(self,name,price):
-        self.name = name
-        self.price = price
-products=[
-    Product("Mouse:",500),
-    Product("Keyboard:",1500),
-    Product("Monitor:",15000)
-]  
-expensive_product = max(products, key=lambda product : product.price)
-print("Most Expensive Product:",expensive_product.name)
-print("Price:",expensive_product.price)
+# class Product:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+# products=[
+#     Product("Mouse:",500),
+#     Product("Keyboard:",1500),
+#     Product("Monitor:",15000)
+# ]  
+# expensive_product = max(products, key=lambda product : product.price)
+# print("Most Expensive Product:",expensive_product.name)
+# print("Price:",expensive_product.price)
+
+
+#23
+#Find Employee with the highest Salary.
+class Employee:
+    def __init__(self,name,salary):
+        self.name = name 
+        self.salary = salary
+employees = [
+      Employee("Amit",40000),
+      Employee("Sumit",50000),
+      Employee("Ankit",55000)
+
+    ]   
+Highest_salary = max(employees, key=lambda employee : employee.salary)
+print("Highest Paid Employee:",Highest_salary.name) 
+print("Salary:",Highest_salary.salary)
