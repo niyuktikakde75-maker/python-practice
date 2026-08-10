@@ -444,20 +444,37 @@
 
 
 #24
-class Books:
-    def __init__(self,name,price):
-        self.name = name
-        self.price = price
-books =[
-    Books("Python Basics",500),
-    Books("Advanced Python",750),
-    Books("Data Sciences",900),
-    Books("C Programming",400)
-] 
+# class Books:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+# books =[
+#     Books("Python Basics",500),
+#     Books("Advanced Python",750),
+#     Books("Data Sciences",900),
+#     Books("C Programming",400)
+# ] 
 
-count = 0
-for book in books:
-    if book.price > 500:
-        count += 1
-        print(book.name,"-",book.price)
-print("Number of books above 500 =",count)        
+# count = 0
+# for book in books:
+#     if book.price > 500:
+#         count += 1
+#         print(book.name,"-",book.price)
+# print("Number of books above 500 =",count)        
+
+
+
+#25
+#Find the player with the heighest score.
+class player:
+    def __init__(self,name,score):
+        self.name = name
+        self.score = score
+players =[
+    player("Virat",95),
+    player("Rohit",120),
+    player("Rahul",80)
+] 
+Highest_score = max(players, key = lambda Players : Players.score)
+print("Top Player:",Highest_score.name)  
+print("Highest score:",Highest_score.score)     
