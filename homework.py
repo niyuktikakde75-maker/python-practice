@@ -385,7 +385,7 @@
 
 
 
-#Section 3:program using Multiple Objects
+#____________Section 3:program using Multiple Objects___________
 #21
 #Store and display the details of five students
 # class Students:
@@ -427,16 +427,37 @@
 
 #23
 #Find Employee with the highest Salary.
-class Employee:
-    def __init__(self,name,salary):
-        self.name = name 
-        self.salary = salary
-employees = [
-      Employee("Amit",40000),
-      Employee("Sumit",50000),
-      Employee("Ankit",55000)
+# class Employee:
+#     def __init__(self,name,salary):
+#         self.name = name 
+#         self.salary = salary
+# employees = [
+#       Employee("Amit",40000),
+#       Employee("Sumit",50000),
+#       Employee("Ankit",55000)
 
-    ]   
-Highest_salary = max(employees, key=lambda employee : employee.salary)
-print("Highest Paid Employee:",Highest_salary.name) 
-print("Salary:",Highest_salary.salary)
+#     ]   
+# Highest_salary = max(employees, key=lambda employee : employee.salary)
+# print("Highest Paid Employee:",Highest_salary.name) 
+# print("Salary:",Highest_salary.salary)
+
+
+
+#24
+class Books:
+    def __init__(self,name,price):
+        self.name = name
+        self.price = price
+books =[
+    Books("Python Basics",500),
+    Books("Advanced Python",750),
+    Books("Data Sciences",900),
+    Books("C Programming",400)
+] 
+
+count = 0
+for book in books:
+    if book.price > 500:
+        count += 1
+        print(book.name,"-",book.price)
+print("Number of books above 500 =",count)        
