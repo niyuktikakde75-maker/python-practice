@@ -524,3 +524,26 @@ account2 = bankAccount("sumit",5000)
 account1.transfer(account2,3000)
 account1.display()
 account2.display()
+
+
+
+
+#28
+# sort student object according to marks.
+class student:
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+students = [
+    student("Amit",75),
+    student("Pooja",92),
+    student("Sneha",82),
+    student("Rahul",65)
+
+
+]  
+
+students.sort(key = lambda student:student.marks,reverse=True)
+
+for student in students:
+    print(student.name , student.marks)
