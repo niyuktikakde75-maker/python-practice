@@ -483,16 +483,44 @@
 
 #26
 #Compare the price of two mobile objcts.
-class Mobile:
-    def __init__(self,name,price):
-        self.name = name
-        self.price = price
-mobile1 = Mobile("Samsung",30000)
-mobile2 = Mobile("Onepluse",35000)
+# class Mobile:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+# mobile1 = Mobile("Samsung",30000)
+# mobile2 = Mobile("Onepluse",35000)
 
-if mobile1.price > mobile2.price:
-    print(mobile1.name ,"is more expansive")
-elif mobile2.price > mobile1.price:
-    print(mobile2.name,"is more expansive")
-else:
-    print("both mobile are of same price")        
+# if mobile1.price > mobile2.price:
+#     print(mobile1.name ,"is more expansive")
+# elif mobile2.price > mobile1.price:
+#     print(mobile2.name,"is more expansive")
+# else:
+#     print("both mobile are of same price")
+# 
+# 
+# 
+# 27
+# Transfer money between two bank account object.
+class bankAccount:
+    def __init__(self,name,balance):
+        self.name = name
+        self.balance = balance
+    def transfer(self,receive , amount):
+        if amount <=0:
+            print("Transfer amount must be positive")
+        elif amount > self.balance:
+            print("Insufficient balance")
+        else:
+            self.balance -= amount
+            receive.balance += amount
+            print("Money transfer successfully")
+
+    def display(self):
+        print(self.name,"balance:",self.balance)
+
+account1 = bankAccount("amit",10000)
+account2 = bankAccount("sumit",5000)
+
+account1.transfer(account2,3000)
+account1.display()
+account2.display()
