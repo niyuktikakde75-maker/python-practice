@@ -552,17 +552,40 @@
 
 #29
 # Display car costing less than 10,00,000
-class car:
-    def __init__(self,name,price):
+# class car:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+# cars =[
+#     car("tata Punch",700000),
+#     car("hyundai",1300000),
+#     car("Swift",800000),
+#     car("mahindra XUV700",1800000)
+# ]  
+# print("car below 10,00,000:")
+# for car in cars:
+#     if car.price < 1000000:
+#         print(car.name,"-",car.price)      
+
+
+
+
+#30
+#calculate the average salary of employee
+class Employee:
+    def __init__(self,name,salary):
         self.name = name
-        self.price = price
-cars =[
-    car("tata Punch",700000),
-    car("hyundai",1300000),
-    car("Swift",800000),
-    car("mahindra XUV700",1800000)
-]  
-print("car below 10,00,000:")
-for car in cars:
-    if car.price < 1000000:
-        print(car.name,"-",car.price)      
+        self.salary = salary
+Employees =[
+    Employee("Amit",40000),
+    Employee("Sumit",50000),
+    Employee("Mohit",45000),
+    Employee("rahul",55000)
+]   
+
+total_salary = 0
+for Employee in Employees:
+    total_salary += Employee.salary
+
+average_salary = total_salary / len(Employees)
+print("average Salary:",average_salary)    
