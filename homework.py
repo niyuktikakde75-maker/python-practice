@@ -596,21 +596,39 @@
 #_________Section 4:Class variable,static Method and class Method________
 #31
 #Use a class variable for the school name.
-class student:
-    school_name ="sonu Career institute"
+# class student:
+#     school_name ="sonu Career institute"
 
-    def __init__(self,name,roll_number):
+#     def __init__(self,name,roll_number):
+#         self.name = name
+#         self.roll_number = roll_number
+
+#     def display(self):
+#         print("Name:",self.name)
+#         print("Roll Number:",self.roll_number)
+#         print("School",student.school_name)  
+
+# student1 = student("Amit",20)
+# student2 = student("Suit",21)
+
+# student1.display()   
+# print()
+# student2.display()      
+
+
+
+
+#32
+#count the number of Employee object created.
+class Employee:
+    employee_count =0
+
+    def __init__(self,name):
         self.name = name
-        self.roll_number = roll_number
+        Employee.employee_count += 1
 
-    def display(self):
-        print("Name:",self.name)
-        print("Roll Number:",self.roll_number)
-        print("School",student.school_name)  
+employee1 = Employee("Amit")        
+employee2 = Employee("sumit")        
+employee3 = Employee("Rahul")  
 
-student1 = student("Amit",20)
-student2 = student("Suit",21)
-
-student1.display()   
-print()
-student2.display()      
+print("Total employee:",Employee.employee_count)
