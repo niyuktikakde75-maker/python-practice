@@ -620,15 +620,35 @@
 
 #32
 #count the number of Employee object created.
-class Employee:
-    employee_count =0
+# class Employee:
+#     employee_count =0
 
-    def __init__(self,name):
-        self.name = name
-        Employee.employee_count += 1
+#     def __init__(self,name):
+#         self.name = name
+#         Employee.employee_count += 1
 
-employee1 = Employee("Amit")        
-employee2 = Employee("sumit")        
-employee3 = Employee("Rahul")  
+# employee1 = Employee("Amit")        
+# employee2 = Employee("sumit")        
+# employee3 = Employee("Rahul")  
 
-print("Total employee:",Employee.employee_count)
+# print("Total employee:",Employee.employee_count)
+
+
+#33
+#Use a Common bank name for all account object.
+class bank:
+    bank_name ="state Bank of india"
+
+    def __init__(self,account_holder):
+        self.account_holder = account_holder
+
+    def display(self):
+        print("account Holder:",self.account_holder)
+        print("Bank Name:",bank.bank_name)
+
+account1 = bank("Amit")
+account2 = bank("rahul")
+account1.display()
+print()
+account2.display()
+
