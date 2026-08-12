@@ -572,20 +572,45 @@
 
 #30
 #calculate the average salary of employee
-class Employee:
-    def __init__(self,name,salary):
+# class Employee:
+#     def __init__(self,name,salary):
+#         self.name = name
+#         self.salary = salary
+# Employees =[
+#     Employee("Amit",40000),
+#     Employee("Sumit",50000),
+#     Employee("Mohit",45000),
+#     Employee("rahul",55000)
+# ]   
+
+# total_salary = 0
+# for Employee in Employees:
+#     total_salary += Employee.salary
+
+# average_salary = total_salary / len(Employees)
+# print("average Salary:",average_salary)    
+
+
+
+
+#_________Section 4:Class variable,static Method and class Method________
+#31
+#Use a class variable for the school name.
+class student:
+    school_name ="sonu Career institute"
+
+    def __init__(self,name,roll_number):
         self.name = name
-        self.salary = salary
-Employees =[
-    Employee("Amit",40000),
-    Employee("Sumit",50000),
-    Employee("Mohit",45000),
-    Employee("rahul",55000)
-]   
+        self.roll_number = roll_number
 
-total_salary = 0
-for Employee in Employees:
-    total_salary += Employee.salary
+    def display(self):
+        print("Name:",self.name)
+        print("Roll Number:",self.roll_number)
+        print("School",student.school_name)  
 
-average_salary = total_salary / len(Employees)
-print("average Salary:",average_salary)    
+student1 = student("Amit",20)
+student2 = student("Suit",21)
+
+student1.display()   
+print()
+student2.display()      
