@@ -501,49 +501,68 @@
 # 
 # 27
 # Transfer money between two bank account object.
-class bankAccount:
-    def __init__(self,name,balance):
-        self.name = name
-        self.balance = balance
-    def transfer(self,receive , amount):
-        if amount <=0:
-            print("Transfer amount must be positive")
-        elif amount > self.balance:
-            print("Insufficient balance")
-        else:
-            self.balance -= amount
-            receive.balance += amount
-            print("Money transfer successfully")
+# class bankAccount:
+#     def __init__(self,name,balance):
+#         self.name = name
+#         self.balance = balance
+#     def transfer(self,receive , amount):
+#         if amount <=0:
+#             print("Transfer amount must be positive")
+#         elif amount > self.balance:
+#             print("Insufficient balance")
+#         else:
+#             self.balance -= amount
+#             receive.balance += amount
+#             print("Money transfer successfully")
 
-    def display(self):
-        print(self.name,"balance:",self.balance)
+#     def display(self):
+#         print(self.name,"balance:",self.balance)
 
-account1 = bankAccount("amit",10000)
-account2 = bankAccount("sumit",5000)
+# account1 = bankAccount("amit",10000)
+# account2 = bankAccount("sumit",5000)
 
-account1.transfer(account2,3000)
-account1.display()
-account2.display()
+# account1.transfer(account2,3000)
+# account1.display()
+# account2.display()
 
 
 
 
 #28
 # sort student object according to marks.
-class student:
-    def __init__(self,name,marks):
+# class student:
+#     def __init__(self,name,marks):
+#         self.name = name
+#         self.marks = marks
+# students = [
+#     student("Amit",75),
+#     student("Pooja",92),
+#     student("Sneha",82),
+#     student("Rahul",65)
+
+
+# ]  
+
+# students.sort(key = lambda student:student.marks,reverse=True)
+
+# for student in students:
+#     print(student.name , student.marks)
+
+
+
+#29
+# Display car costing less than 10,00,000
+class car:
+    def __init__(self,name,price):
         self.name = name
-        self.marks = marks
-students = [
-    student("Amit",75),
-    student("Pooja",92),
-    student("Sneha",82),
-    student("Rahul",65)
-
-
+        self.price = price
+cars =[
+    car("tata Punch",700000),
+    car("hyundai",1300000),
+    car("Swift",800000),
+    car("mahindra XUV700",1800000)
 ]  
-
-students.sort(key = lambda student:student.marks,reverse=True)
-
-for student in students:
-    print(student.name , student.marks)
+print("car below 10,00,000:")
+for car in cars:
+    if car.price < 1000000:
+        print(car.name,"-",car.price)      
