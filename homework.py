@@ -636,19 +636,39 @@
 
 #33
 #Use a Common bank name for all account object.
-class bank:
-    bank_name ="state Bank of india"
+# class bank:
+#     bank_name ="state Bank of india"
 
-    def __init__(self,account_holder):
-        self.account_holder = account_holder
+#     def __init__(self,account_holder):
+#         self.account_holder = account_holder
 
-    def display(self):
-        print("account Holder:",self.account_holder)
-        print("Bank Name:",bank.bank_name)
+#     def display(self):
+#         print("account Holder:",self.account_holder)
+#         print("Bank Name:",bank.bank_name)
 
-account1 = bank("Amit")
-account2 = bank("rahul")
-account1.display()
-print()
-account2.display()
+# account1 = bank("Amit")
+# account2 = bank("rahul")
+# account1.display()
+# print()
+# account2.display()
+
+
+#34
+# Calculate a product price after a class-level discount.
+class product:
+    discount_percentage = 10
+
+    def __init__(self,name,price):
+        self.name = name
+        self.price = price
+
+    def discounted_price(self):
+        discount = self.price * product.discount_percentage /100
+        return self.price - discount
+
+product1 = product("laptop",600000)
+
+print("Product:",product1.name)
+print("original Price:",product1.price)
+print("discounted price:",product1.discounted_price())
 
