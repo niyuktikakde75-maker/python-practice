@@ -725,4 +725,7 @@ class Student:
 
 Student.change_school_name("Sonu Acreer Institute")
 Student1 = Student("Amit")
-Student1.display()               
+Student2 = Student("sumit")
+Student1.display() 
+print()
+Student2.display()              
