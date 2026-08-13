@@ -676,21 +676,34 @@
 
 #35
 #store a common college name for different students.
-class CollegeStudet:
-    college_name = "Tulsiramji Gaikwad Patil college of Engineering and Technology"
+# class CollegeStudet:
+#     college_name = "Tulsiramji Gaikwad Patil college of Engineering and Technology"
 
-    def __init__(self,name,branch):
-        self.name = name
-        self.branch = branch
+#     def __init__(self,name,branch):
+#         self.name = name
+#         self.branch = branch
 
-    def display(self):
-        print("Student Name:",self.name)
-        print("Branch:",self.branch)
-        print("College Name:",CollegeStudet.college_name)
+#     def display(self):
+#         print("Student Name:",self.name)
+#         print("Branch:",self.branch)
+#         print("College Name:",CollegeStudet.college_name)
 
-student1 = CollegeStudet("Amit","ECE")
-student2 = CollegeStudet("Sumit","Biotechnology")
-student1.display()
-print()
-student2.display()
+# student1 = CollegeStudet("Amit","ECE")
+# student2 = CollegeStudet("Sumit","Biotechnology")
+# student1.display()
+# print()
+# student2.display()
 
+
+
+#36
+#check whether a number is even or odd using a static method.
+class MathUtility:
+    @staticmethod
+    def check_even_odd(number):
+        if number % 2 == 0:
+            return "Even"
+        return "Odd"
+
+print(MathUtility.check_even_odd(25))
+print(MathUtility.check_even_odd(40))    
