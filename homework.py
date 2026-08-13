@@ -711,21 +711,41 @@
 
 #37
 #chamge the School name using a class method.
-class Student:
-    school_name = "Old school"
+# class Student:
+#     school_name = "Old school"
+
+#     def __init__(self,name):
+#         self.name = name
+#     @classmethod
+#     def change_school_name(cls,new_name):
+#         cls.school_name = new_name
+
+#     def display(self):
+#         print(self.name,"-",Student.school_name)
+
+# Student.change_school_name("Sonu Acreer Institute")
+# Student1 = Student("Amit")
+# Student2 = Student("sumit")
+# Student1.display() 
+# print()
+# Student2.display()              
+
+
+#38
+# Update a company name using a class methhod
+class Employee:
+    comapny_name = "ABC limited"
 
     def __init__(self,name):
         self.name = name
     @classmethod
-    def change_school_name(cls,new_name):
-        cls.school_name = new_name
+    def update_company(cls,new_company):
+        cls.comapny_name = new_company
 
     def display(self):
-        print(self.name,"-",Student.school_name)
+        print("Employee:",self.name)
+        print("company",Employee.comapny_name)   
 
-Student.change_school_name("Sonu Acreer Institute")
-Student1 = Student("Amit")
-Student2 = Student("sumit")
-Student1.display() 
-print()
-Student2.display()              
+Employee.update_company("Tech Solution Private Limited")
+Employee1 = Employee("Rahul")
+Employee1.display()           
