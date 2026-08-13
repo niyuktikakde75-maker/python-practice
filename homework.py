@@ -655,20 +655,42 @@
 
 #34
 # Calculate a product price after a class-level discount.
-class product:
-    discount_percentage = 10
+# class product:
+#     discount_percentage = 10
 
-    def __init__(self,name,price):
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+
+#     def discounted_price(self):
+#         discount = self.price * product.discount_percentage /100
+#         return self.price - discount
+
+# product1 = product("laptop",600000)
+
+# print("Product:",product1.name)
+# print("original Price:",product1.price)
+# print("discounted price:",product1.discounted_price())
+
+
+
+#35
+#store a common college name for different students.
+class CollegeStudet:
+    college_name = "Tulsiramji Gaikwad Patil college of Engineering and Technology"
+
+    def __init__(self,name,branch):
         self.name = name
-        self.price = price
+        self.branch = branch
 
-    def discounted_price(self):
-        discount = self.price * product.discount_percentage /100
-        return self.price - discount
+    def display(self):
+        print("Student Name:",self.name)
+        print("Branch:",self.branch)
+        print("College Name:",CollegeStudet.college_name)
 
-product1 = product("laptop",600000)
-
-print("Product:",product1.name)
-print("original Price:",product1.price)
-print("discounted price:",product1.discounted_price())
+student1 = CollegeStudet("Amit","ECE")
+student2 = CollegeStudet("Sumit","Biotechnology")
+student1.display()
+print()
+student2.display()
 
