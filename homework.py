@@ -698,12 +698,31 @@
 
 #36
 #check whether a number is even or odd using a static method.
-class MathUtility:
-    @staticmethod
-    def check_even_odd(number):
-        if number % 2 == 0:
-            return "Even"
-        return "Odd"
+# class MathUtility:
+#     @staticmethod
+#     def check_even_odd(number):
+#         if number % 2 == 0:
+#             return "Even"
+#         return "Odd"
 
-print(MathUtility.check_even_odd(25))
-print(MathUtility.check_even_odd(40))    
+# print(MathUtility.check_even_odd(25))
+# print(MathUtility.check_even_odd(40))   
+
+
+#37
+#chamge the School name using a class method.
+class Student:
+    school_name = "Old school"
+
+    def __init__(self,name):
+        self.name = name
+    @classmethod
+    def change_school_name(cls,new_name):
+        cls.school_name = new_name
+
+    def display(self):
+        print(self.name,"-",Student.school_name)
+
+Student.change_school_name("Sonu Acreer Institute")
+Student1 = Student("Amit")
+Student1.display()               
