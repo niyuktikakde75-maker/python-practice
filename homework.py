@@ -733,19 +733,35 @@
 
 #38
 # Update a company name using a class methhod
-class Employee:
-    comapny_name = "ABC limited"
+# class Employee:
+#     comapny_name = "ABC limited"
 
-    def __init__(self,name):
-        self.name = name
-    @classmethod
-    def update_company(cls,new_company):
-        cls.comapny_name = new_company
+#     def __init__(self,name):
+#         self.name = name
+#     @classmethod
+#     def update_company(cls,new_company):
+#         cls.comapny_name = new_company
 
-    def display(self):
-        print("Employee:",self.name)
-        print("company",Employee.comapny_name)   
+#     def display(self):
+#         print("Employee:",self.name)
+#         print("company",Employee.comapny_name)   
 
-Employee.update_company("Tech Solution Private Limited")
-Employee1 = Employee("Rahul")
-Employee1.display()           
+# Employee.update_company("Tech Solution Private Limited")
+# Employee1 = Employee("Rahul")
+# Employee1.display()      
+# 
+# 
+
+
+#39
+#perform addition and multiplication using statis method.
+class Calculator:
+    @staticmethod
+    def add(number1 , number2):
+        return number1 + number2
+    @staticmethod
+    def multiply(number1,number2):
+        return number1 * number2
+
+print("Addition:",Calculator.add(50,10))    
+print("Multiplication:",Calculator.multiply(50,10))    
