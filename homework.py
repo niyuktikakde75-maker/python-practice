@@ -755,13 +755,26 @@
 
 #39
 #perform addition and multiplication using statis method.
-class Calculator:
-    @staticmethod
-    def add(number1 , number2):
-        return number1 + number2
-    @staticmethod
-    def multiply(number1,number2):
-        return number1 * number2
+# class Calculator:
+#     @staticmethod
+#     def add(number1 , number2):
+#         return number1 + number2
+#     @staticmethod
+#     def multiply(number1,number2):
+#         return number1 * number2
 
-print("Addition:",Calculator.add(50,10))    
-print("Multiplication:",Calculator.multiply(50,10))    
+# print("Addition:",Calculator.add(50,10))    
+# print("Multiplication:",Calculator.multiply(50,10))   
+# 
+# 
+# 
+# 40
+# convert Celsius to Fahrenheit using static mathod.
+class Tempeture:
+    @staticmethod
+    def celsius_to_fahrenheit(celsius):
+        return(celsius * 9/5) + 32 
+
+temperature = float(input("Enter temperature in celsius:"))
+print("temperature in fehrehneit:", Tempeture.celsius_to_fahrenheit(temperature))
+    
