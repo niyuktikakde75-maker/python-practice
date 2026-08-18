@@ -808,16 +808,36 @@
 
 #43.
 #add two object using operator overloading.
-class Number:
-    def __init__(self,value):
-        self.value = value
-    def __add__(self,other):
-        return Number(self.value + other.value)
-    def __str__(self):
-        return str(self.value)    
+# class Number:
+#     def __init__(self,value):
+#         self.value = value
+#     def __add__(self,other):
+#         return Number(self.value + other.value)
+#     def __str__(self):
+#         return str(self.value)    
 
-Number1 = Number(10)
-Number2 = Number(20)
-Number3 = Number1 + Number2
+# Number1 = Number(10)
+# Number2 = Number(20)
+# Number3 = Number1 + Number2
 
-print("sum :",Number3)
+# print("sum :",Number3)
+
+
+
+#44
+#Compare two Product price using the less-than operator.
+class product:
+    def __init__(self,name,price):
+        self.name = name
+        self.price = price
+
+    def __lt__(self, other):
+        return self.price < other.price
+
+product1 = product("Mousee",500)
+product2 = product("keyboard",1000)
+
+if product1 < product2:
+    print(product1.name ,"is cheaper")
+else:
+    print(product2.name,"is cheaper")    
