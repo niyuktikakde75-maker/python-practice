@@ -782,12 +782,25 @@
 #_______section 5:special Method and Operator Overloading________
 #41
 # Display student information using_str_()  
-class student:
-    def __init__(self,name,marks):
-        self.name = name
-        self.marks = marks
-    def __str__(self):
-        return f"Student Name:{self.name},Marks:{self.marks}"
+# class student:
+#     def __init__(self,name,marks):
+#         self.name = name
+#         self.marks = marks
+#     def __str__(self):
+#         return f"Student Name:{self.name},Marks:{self.marks}"
 
-student1 = student("amit",85)      
-print(student1)    
+# student1 = student("amit",85)      
+# print(student1)    
+
+#42
+# Display book information using __str__()
+class book:
+    def __init__(self,title,author,price):
+        self.title = title
+        self.author = author 
+        self.price = price
+    def __str__(self):
+        return(f"Title:{self.title},Author:{self.author}," f"price:{self.price}")    
+
+book1 = book("python programming","John ",599)
+print(book1)    
