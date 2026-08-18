@@ -794,13 +794,30 @@
 
 #42
 # Display book information using __str__()
-class book:
-    def __init__(self,title,author,price):
-        self.title = title
-        self.author = author 
-        self.price = price
-    def __str__(self):
-        return(f"Title:{self.title},Author:{self.author}," f"price:{self.price}")    
+# class book:
+#     def __init__(self,title,author,price):
+#         self.title = title
+#         self.author = author 
+#         self.price = price
+#     def __str__(self):
+#         return(f"Title:{self.title},Author:{self.author}," f"price:{self.price}")    
 
-book1 = book("python programming","John ",599)
-print(book1)    
+# book1 = book("python programming","John ",599)
+# print(book1)    
+
+
+#43.
+#add two object using operator overloading.
+class Number:
+    def __init__(self,value):
+        self.value = value
+    def __add__(self,other):
+        return Number(self.value + other.value)
+    def __str__(self):
+        return str(self.value)    
+
+Number1 = Number(10)
+Number2 = Number(20)
+Number3 = Number1 + Number2
+
+print("sum :",Number3)
