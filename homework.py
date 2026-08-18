@@ -770,11 +770,24 @@
 # 
 # 40
 # convert Celsius to Fahrenheit using static mathod.
-class Tempeture:
-    @staticmethod
-    def celsius_to_fahrenheit(celsius):
-        return(celsius * 9/5) + 32 
+# class Tempeture:
+#     @staticmethod
+#     def celsius_to_fahrenheit(celsius):
+#         return(celsius * 9/5) + 32 
 
-temperature = float(input("Enter temperature in celsius:"))
-print("temperature in fehrehneit:", Tempeture.celsius_to_fahrenheit(temperature))
-    
+# temperature = float(input("Enter temperature in celsius:"))
+# print("temperature in fehrehneit:", Tempeture.celsius_to_fahrenheit(temperature))
+
+
+#_______section 5:special Method and Operator Overloading________
+#41
+# Display student information using_str_()  
+class student:
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+    def __str__(self):
+        return f"Student Name:{self.name},Marks:{self.marks}"
+
+student1 = student("amit",85)      
+print(student1)    
