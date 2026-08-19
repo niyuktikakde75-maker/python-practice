@@ -826,18 +826,36 @@
 
 #44
 #Compare two Product price using the less-than operator.
-class product:
-    def __init__(self,name,price):
+# class product:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+
+#     def __lt__(self, other):
+#         return self.price < other.price
+
+# product1 = product("Mousee",500)
+# product2 = product("keyboard",1000)
+
+# if product1 < product2:
+#     print(product1.name ,"is cheaper")
+# else:
+#     print(product2.name,"is cheaper")    
+
+
+#45
+#Compare the two marks of two students using the greater than operator.
+class student:
+    def __init__(self,name,marks):
         self.name = name
-        self.price = price
+        self.marks = marks
+    def __gt__(self, other):
+        return self.marks > other.marks
 
-    def __lt__(self, other):
-        return self.price < other.price
+student1 = student("amit",85)
+student2 = student("Sneha",92)
 
-product1 = product("Mousee",500)
-product2 = product("keyboard",1000)
-
-if product1 < product2:
-    print(product1.name ,"is cheaper")
+if student1 > student2:
+    print(student1.name,"has higher marks")
 else:
-    print(product2.name,"is cheaper")    
+    print(student2.name,"has higher marks")    
