@@ -935,23 +935,26 @@
 
 #48
 #Store and display hospital patients details.
-class hostipalptient:
-    def __init__(self,name,age,disease,doctor,treatment_cost):
-        self.name = name
-        self.age = age
-        self.disease = disease
-        self.doctor = doctor
-        self.treatment_cost = treatment_cost
+# class hostipalptient:
+#     def __init__(self,name,age,disease,doctor,treatment_cost):
+#         self.name = name
+#         self.age = age
+#         self.disease = disease
+#         self.doctor = doctor
+#         self.treatment_cost = treatment_cost
 
-    def display(self):
-        print("Ptient Name:",self.name),
-        print("Patient Age:",self.age),
-        print("Disease:",self.disease),
-        print("Doctor:",self.doctor),
-        print("Treatment Cost:",self.treatment_cost)
+#     def display(self):
+#         print("Ptient Name:",self.name),
+#         print("Patient Age:",self.age),
+#         print("Disease:",self.disease),
+#         print("Doctor:",self.doctor),
+#         print("Treatment Cost:",self.treatment_cost)
 
-patient1 = hostipalptient("Rahul",35,"Fever","Dr.Sharma",2500)
-patient1.display()         
+# patient1 = hostipalptient("Rahul",35,"Fever","Dr.Sharma",2500)
+# patient1.display()    
+# 
+#concept:A class can represent a real-world record with related fields.
+     
  
        
 
