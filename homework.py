@@ -845,17 +845,54 @@
 
 #45
 #Compare the two marks of two students using the greater than operator.
-class student:
-    def __init__(self,name,marks):
-        self.name = name
-        self.marks = marks
-    def __gt__(self, other):
-        return self.marks > other.marks
+# class student:
+#     def __init__(self,name,marks):
+#         self.name = name
+#         self.marks = marks
+#     def __gt__(self, other):
+#         return self.marks > other.marks
 
-student1 = student("amit",85)
-student2 = student("Sneha",92)
+# student1 = student("amit",85)
+# student2 = student("Sneha",92)
 
-if student1 > student2:
-    print(student1.name,"has higher marks")
-else:
-    print(student2.name,"has higher marks")    
+# if student1 > student2:
+#     print(student1.name,"has higher marks")
+# else:
+#     print(student2.name,"has higher marks")    
+
+
+
+#__________section 6:Real World Programs and Mini Projects____________
+
+#46
+#Create a simple ATM system.
+class ATM:
+    def __init__(self,account_holder,balance = 0):
+        self.account_holder = account_holder
+        self.balance = balance
+    def check_balance(self):
+        print("Available Balance:",self.balance)  
+
+    def deposit(self,amount):
+        if amount > 0:
+            self.balance += amount
+            print("Deposite Successfully")
+        else:
+            print("Invalid deposite amount")
+
+    def withdrawal(self,amount):
+        if amount <= 0:
+            print("invalid withdrawal amount") 
+        elif amount > self.balance:
+            print("insufficient balance")
+        else:
+            self.balance -= amount
+            print("Withdrawal successfully")   
+
+atm = ATM("Amit",10000)
+atm.check_balance()
+atm.deposit(2000)
+atm.withdrawal(1000)
+atm.check_balance()                               
+
+        
