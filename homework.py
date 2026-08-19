@@ -866,33 +866,70 @@
 
 #46
 #Create a simple ATM system.
-class ATM:
-    def __init__(self,account_holder,balance = 0):
-        self.account_holder = account_holder
-        self.balance = balance
-    def check_balance(self):
-        print("Available Balance:",self.balance)  
+# class ATM:
+#     def __init__(self,account_holder,balance = 0):
+#         self.account_holder = account_holder
+#         self.balance = balance
+#     def check_balance(self):
+#         print("Available Balance:",self.balance)  
 
-    def deposit(self,amount):
-        if amount > 0:
-            self.balance += amount
-            print("Deposite Successfully")
+#     def deposit(self,amount):
+#         if amount > 0:
+#             self.balance += amount
+#             print("Deposite Successfully")
+#         else:
+#             print("Invalid deposite amount")
+
+#     def withdrawal(self,amount):
+#         if amount <= 0:
+#             print("invalid withdrawal amount") 
+#         elif amount > self.balance:
+#             print("insufficient balance")
+#         else:
+#             self.balance -= amount
+#             print("Withdrawal successfully")   
+
+# atm = ATM("Amit",10000)
+# atm.check_balance()
+# atm.deposit(2000)
+# atm.withdrawal(1000)
+# atm.check_balance()        
+
+
+
+#47
+#Create a simple library system.
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self,book_name):
+        self.books.append(book_name)
+        print(book_name,"Added Successfully")    
+
+    def issue_book(self,book_name):
+        if book_name in self.books:
+            self.books.remove(book_name)
+            print(book_name,"issused successfully")
         else:
-            print("Invalid deposite amount")
+            print("Book is not availabl")  
 
-    def withdrawal(self,amount):
-        if amount <= 0:
-            print("invalid withdrawal amount") 
-        elif amount > self.balance:
-            print("insufficient balance")
-        else:
-            self.balance -= amount
-            print("Withdrawal successfully")   
+    def return_book(self,book_name):
+        self.books.append(book_name)
+        print(book_name,"returned successfully")   
 
-atm = ATM("Amit",10000)
-atm.check_balance()
-atm.deposit(2000)
-atm.withdrawal(1000)
-atm.check_balance()                               
+    def display_books(self):
+        print("Available Books:") 
+        for book in self.books:
+            print(book)
 
+
+library = Library()
+library.add_book("Python Basics")
+library.add_book("c++ Programming")
+library.add_book("Java Programming")
+library.issue_book("Python Basics")
+library.return_book("Python Basics")
+library.display_books()
+                    
         
