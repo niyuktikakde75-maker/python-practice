@@ -899,37 +899,62 @@
 
 #47
 #Create a simple library system.
-class Library:
-    def __init__(self):
-        self.books = []
+# class Library:
+#     def __init__(self):
+#         self.books = []
 
-    def add_book(self,book_name):
-        self.books.append(book_name)
-        print(book_name,"Added Successfully")    
+#     def add_book(self,book_name):
+#         self.books.append(book_name)
+#         print(book_name,"Added Successfully")    
 
-    def issue_book(self,book_name):
-        if book_name in self.books:
-            self.books.remove(book_name)
-            print(book_name,"issused successfully")
-        else:
-            print("Book is not availabl")  
+#     def issue_book(self,book_name):
+#         if book_name in self.books:
+#             self.books.remove(book_name)
+#             print(book_name,"issused successfully")
+#         else:
+#             print("Book is not availabl")  
 
-    def return_book(self,book_name):
-        self.books.append(book_name)
-        print(book_name,"returned successfully")   
+#     def return_book(self,book_name):
+#         self.books.append(book_name)
+#         print(book_name,"returned successfully")   
 
-    def display_books(self):
-        print("Available Books:") 
-        for book in self.books:
-            print(book)
+#     def display_books(self):
+#         print("Available Books:") 
+#         for book in self.books:
+#             print(book)
 
 
-library = Library()
-library.add_book("Python Basics")
-library.add_book("c++ Programming")
-library.add_book("Java Programming")
-library.issue_book("Python Basics")
-library.return_book("Python Basics")
-library.display_books()
+# library = Library()
+# library.add_book("Python Basics")
+# library.add_book("c++ Programming")
+# library.add_book("Java Programming")
+# library.issue_book("Python Basics")
+# library.return_book("Python Basics")
+# library.display_books()
+
+
+#48
+#Store and display hospital patients details.
+class hostipalptient:
+    def __init__(self,name,age,disease,doctor,treatment_cost):
+        self.name = name
+        self.age = age
+        self.disease = disease
+        self.doctor = doctor
+        self.treatment_cost = treatment_cost
+
+    def display(self):
+        print("Ptient Name:",self.name),
+        print("Patient Age:",self.age),
+        print("Disease:",self.disease),
+        print("Doctor:",self.doctor),
+        print("Treatment Cost:",self.treatment_cost)
+
+patient1 = hostipalptient("Rahul",35,"Fever","Dr.Sharma",2500)
+patient1.display()         
+ 
+       
+
+
                     
         
