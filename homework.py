@@ -958,38 +958,67 @@
 
 #49
 #create a restaurant billing system.
-class RestaurantOrder:
-    def __init__(self):
-       self.items=[]
-    def add_item(self,name ,quantity,price):
-         self.items.append({
-            "name":name,
-            "quantity":quantity,
-            "price":price,
+# class RestaurantOrder:
+#     def __init__(self):
+#        self.items=[]
+#     def add_item(self,name ,quantity,price):
+#          self.items.append({
+#             "name":name,
+#             "quantity":quantity,
+#             "price":price,
 
              
-         })
-    def calculatr_bill(self):
-        total = 0
-        for item in self.items:
-            total+=item["quantity"]*item["price"]
-        return total    
+#          })
+#     def calculatr_bill(self):
+#         total = 0
+#         for item in self.items:
+#             total+=item["quantity"]*item["price"]
+#         return total    
 
-    def display_bill(self):
-        print("Restaurant Bill") 
-        for item in self.items:
-            item_total = item["quantity"]*item["price"]
-            print(item["name"],item["quantity"],item["price"],item_total)  
-        print("Final Bill:",self.calculatr_bill())         
+#     def display_bill(self):
+#         print("Restaurant Bill") 
+#         for item in self.items:
+#             item_total = item["quantity"]*item["price"]
+#             print(item["name"],item["quantity"],item["price"],item_total)  
+#         print("Final Bill:",self.calculatr_bill())         
 
-order = RestaurantOrder()
-order.add_item("pizza:",2,250)
-order.add_item("Burger:",3,120)
-order.add_item("cold Drink:",2,50)
-order.display_bill()
+# order = RestaurantOrder()
+# order.add_item("pizza:",2,250)
+# order.add_item("Burger:",3,120)
+# order.add_item("cold Drink:",2,50)
+# order.display_bill()
+#
+#Concept:The order object stores many items and calculats the complete bill.
+
+
+
+#50.
+# Create an online course class wit student enrolment.
+class onlineCourse:
+    def __init__(self,course_name,instructor,fees,duration):
+        self.course_name= course_name
+        self.instructor = instructor
+        self.fees = fees
+        self.duration = duration
+        self.students =[]
+
+    def enrol_student(self,student_name):
+        self.students.append (student_name) 
+        print(student_name,"enrolled successfullly")
+
+    def display(self):
+        print("Course:",self.course_name)
+        print("Instructor:",self.instructor)
+        print("Fees:",self.fees)
+        print("Duration:",self.duration)
+        print("Enrolled Students:",self.students)     
+
+course1 = onlineCourse("pythnon Programming","Sonu sir",5000,"3 months")
+course1.enrol_student("Amit")
+course1.enrol_student("Sumit")
+course1.display()
+
          
-
-     
  
        
 
