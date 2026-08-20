@@ -954,6 +954,41 @@
 # patient1.display()    
 # 
 #concept:A class can represent a real-world record with related fields.
+
+
+#49
+#create a restaurant billing system.
+class RestaurantOrder:
+    def __init__(self):
+       self.items=[]
+    def add_item(self,name ,quantity,price):
+         self.items.append({
+            "name":name,
+            "quantity":quantity,
+            "price":price,
+
+             
+         })
+    def calculatr_bill(self):
+        total = 0
+        for item in self.items:
+            total+=item["quantity"]*item["price"]
+        return total    
+
+    def display_bill(self):
+        print("Restaurant Bill") 
+        for item in self.items:
+            item_total = item["quantity"]*item["price"]
+            print(item["name"],item["quantity"],item["price"],item_total)  
+        print("Final Bill:",self.calculatr_bill())         
+
+order = RestaurantOrder()
+order.add_item("pizza:",2,250)
+order.add_item("Burger:",3,120)
+order.add_item("cold Drink:",2,50)
+order.display_bill()
+         
+
      
  
        
