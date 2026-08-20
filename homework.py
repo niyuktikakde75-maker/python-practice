@@ -994,31 +994,70 @@
 
 #50.
 # Create an online course class wit student enrolment.
-class onlineCourse:
-    def __init__(self,course_name,instructor,fees,duration):
-        self.course_name= course_name
-        self.instructor = instructor
-        self.fees = fees
-        self.duration = duration
-        self.students =[]
+# class onlineCourse:
+#     def __init__(self,course_name,instructor,fees,duration):
+#         self.course_name= course_name
+#         self.instructor = instructor
+#         self.fees = fees
+#         self.duration = duration
+#         self.students =[]
 
-    def enrol_student(self,student_name):
-        self.students.append (student_name) 
-        print(student_name,"enrolled successfullly")
+#     def enrol_student(self,student_name):
+#         self.students.append (student_name) 
+#         print(student_name,"enrolled successfullly")
+
+#     def display(self):
+#         print("Course:",self.course_name)
+#         print("Instructor:",self.instructor)
+#         print("Fees:",self.fees)
+#         print("Duration:",self.duration)
+#         print("Enrolled Students:",self.students)     
+
+# course1 = onlineCourse("pythnon Programming","Sonu sir",5000,"3 months")
+# course1.enrol_student("Amit")
+# course1.enrol_student("Sumit")
+# course1.display()
+#An object can maintain a growing list of enrolled students.
+
+
+#51
+#create a student management system.
+class student:
+    def __init__(self,roll_number,name,marks):
+        self.roll_number = roll_number
+        self.name = name
+        self.marks = marks
 
     def display(self):
-        print("Course:",self.course_name)
-        print("Instructor:",self.instructor)
-        print("Fees:",self.fees)
-        print("Duration:",self.duration)
-        print("Enrolled Students:",self.students)     
+        print(self.roll_number,self.name,self.marks)
 
-course1 = onlineCourse("pythnon Programming","Sonu sir",5000,"3 months")
-course1.enrol_student("Amit")
-course1.enrol_student("Sumit")
-course1.display()
+class studentManagement:
+    def __init__(self):
+        self.students = []
 
-#An object can maintain a growing list of enrolled students.
+    def add_student(self,student):
+        self.students.append(student)
+
+    def search_student(self,roll_number):
+        for student in self.students:
+            if student.roll_number == roll_number:
+                student.display()
+                return
+        print("student not fonud")
+
+    def display_all(self):
+        for student in self.students:
+            student.display()
+
+management = studentManagement()
+management.add_student(student(1,"amit",85))
+management.add_student(student(2,"Sneha",90))
+management.add_student(student(3,"Rahul",75))
+management.display_all()
+print("\nSearch Result:")
+management.search_student(2)                 
+
+                               
 
          
  
