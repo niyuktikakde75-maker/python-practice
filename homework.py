@@ -1018,6 +1018,8 @@ course1.enrol_student("Amit")
 course1.enrol_student("Sumit")
 course1.display()
 
+#An object can maintain a growing list of enrolled students.
+
          
  
        
