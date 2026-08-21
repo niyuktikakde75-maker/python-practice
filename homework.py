@@ -1060,6 +1060,53 @@
 #concept: This project uses one class to store data and another class to manage object.
 
 
+
+
+#52
+#Create a hostel room bookin system.
+class Hostelroom:
+    def __init__(self,room_number,room_type,price,):
+        self.room_number = room_number
+        self.room_type = room_type
+        self.price = price
+        self.is_booked = False
+
+    def book_room(self):
+        if self.is_booked:
+            print("Room Booked successfully")
+        else:
+            self.is_booked = True
+            print("Room booked successfully")    
+
+    def cancel_booking(self):
+        if self.is_booked:
+            self.is_booked = False
+            print("Booking cancelled Successfully")
+        else:
+            print("Room is not currently booked") 
+
+    def display(self):
+        status ="Booked" if self.is_booked else "Available"
+        print("Room Number:",self.room_number)
+        print("Room Type:",self.room_type)
+        print("Price:",self.price)
+        print("Status:",status)
+
+room1 = Hostelroom(101,"Deluxe",2500)
+room1.display()
+room1.book_room()
+room1.display()
+ 
+        
+
+        
+
+
+
+
+
+
+
                                
 
          
