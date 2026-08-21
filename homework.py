@@ -1022,40 +1022,43 @@
 
 #51
 #create a student management system.
-class student:
-    def __init__(self,roll_number,name,marks):
-        self.roll_number = roll_number
-        self.name = name
-        self.marks = marks
+# class student:
+#     def __init__(self,roll_number,name,marks):
+#         self.roll_number = roll_number
+#         self.name = name
+#         self.marks = marks
 
-    def display(self):
-        print(self.roll_number,self.name,self.marks)
+#     def display(self):
+#         print(self.roll_number,self.name,self.marks)
 
-class studentManagement:
-    def __init__(self):
-        self.students = []
+# class studentManagement:
+#     def __init__(self):
+#         self.students = []
 
-    def add_student(self,student):
-        self.students.append(student)
+#     def add_student(self,student):
+#         self.students.append(student)
 
-    def search_student(self,roll_number):
-        for student in self.students:
-            if student.roll_number == roll_number:
-                student.display()
-                return
-        print("student not fonud")
+#     def search_student(self,roll_number):
+#         for student in self.students:
+#             if student.roll_number == roll_number:
+#                 student.display()
+#                 return
+#         print("student not fonud")
 
-    def display_all(self):
-        for student in self.students:
-            student.display()
+#     def display_all(self):
+#         for student in self.students:
+#             student.display()
 
-management = studentManagement()
-management.add_student(student(1,"amit",85))
-management.add_student(student(2,"Sneha",90))
-management.add_student(student(3,"Rahul",75))
-management.display_all()
-print("\nSearch Result:")
-management.search_student(2)                 
+# management = studentManagement()
+# management.add_student(student(1,"amit",85))
+# management.add_student(student(2,"Sneha",90))
+# management.add_student(student(3,"Rahul",75))
+# management.display_all()
+# print("\nSearch Result:")
+# management.search_student(2) 
+#  
+#concept: This project uses one class to store data and another class to manage object.
+
 
                                
 
