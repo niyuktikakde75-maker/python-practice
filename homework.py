@@ -1096,6 +1096,7 @@ room1 = Hostelroom(101,"Deluxe",2500)
 room1.display()
 room1.book_room()
 room1.display()
+#concept:Boolean state is used to track whether a room is booked.
  
         
 
