@@ -1073,7 +1073,7 @@ class Hostelroom:
 
     def book_room(self):
         if self.is_booked:
-            print("Room Booked successfully")
+            print("Room is already Booked successfully")
         else:
             self.is_booked = True
             print("Room booked successfully")    
