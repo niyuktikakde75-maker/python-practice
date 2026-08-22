@@ -1064,39 +1064,78 @@
 
 #52
 #Create a hostel room bookin system.
-class Hostelroom:
-    def __init__(self,room_number,room_type,price,):
-        self.room_number = room_number
-        self.room_type = room_type
-        self.price = price
-        self.is_booked = False
+# class Hostelroom:
+#     def __init__(self,room_number,room_type,price,):
+#         self.room_number = room_number
+#         self.room_type = room_type
+#         self.price = price
+#         self.is_booked = False
 
-    def book_room(self):
-        if self.is_booked:
-            print("Room is already Booked successfully")
-        else:
-            self.is_booked = True
-            print("Room booked successfully")    
+#     def book_room(self):
+#         if self.is_booked:
+#             print("Room is already Booked successfully")
+#         else:
+#             self.is_booked = True
+#             print("Room booked successfully")    
 
-    def cancel_booking(self):
-        if self.is_booked:
-            self.is_booked = False
-            print("Booking cancelled Successfully")
-        else:
-            print("Room is not currently booked") 
+#     def cancel_booking(self):
+#         if self.is_booked:
+#             self.is_booked = False
+#             print("Booking cancelled Successfully")
+#         else:
+#             print("Room is not currently booked") 
 
-    def display(self):
-        status ="Booked" if self.is_booked else "Available"
-        print("Room Number:",self.room_number)
-        print("Room Type:",self.room_type)
-        print("Price:",self.price)
-        print("Status:",status)
+#     def display(self):
+#         status ="Booked" if self.is_booked else "Available"
+#         print("Room Number:",self.room_number)
+#         print("Room Type:",self.room_type)
+#         print("Price:",self.price)
+#         print("Status:",status)
 
-room1 = Hostelroom(101,"Deluxe",2500)
-room1.display()
-room1.book_room()
-room1.display()
+# room1 = Hostelroom(101,"Deluxe",2500)
+# room1.display()
+# room1.book_room()
+# room1.display()
 #concept:Boolean state is used to track whether a room is booked.
+
+
+
+
+
+#53.
+#create an inventory management system.
+class Inventory:
+    def __init__(self):
+        self.products = {}
+
+    def add_product(self,name,quantity):
+        if name in self.products:
+            self.products[name]+= quantity
+        else:
+            self.products[name] = quantity
+        print("Product added Successfully") 
+
+    def sell_product(self,name,quantity):
+        if name not in self.products:
+            print("Product not found")
+        elif quantity > self.products[name]:
+            print("Insufficient stock")
+        else:
+            self.products[name]-=quantity
+            print("Product sold successfully")    
+
+    def display_stock(self):
+        print("n\Available stock")
+        for name, quantity in self.products.items():
+            print(name,"-",quantity) 
+
+inventory = Inventory() 
+inventory.add_product("Mouse",20)
+inventory.add_product("Keyboard",10)
+inventory.sell_product("Mouse",5)
+inventory.display_stock()                                
+
+        
  
         
 
