@@ -1133,7 +1133,8 @@ inventory = Inventory()
 inventory.add_product("Mouse",20)
 inventory.add_product("Keyboard",10)
 inventory.sell_product("Mouse",5)
-inventory.display_stock()                                
+inventory.display_stock()    
+#concept:A dictionary is suitable for mapping product name and quantity.                            
 
         
  
