@@ -1166,7 +1166,8 @@ tracker = ExpenseTracker()
 tracker.add_expenses("Food",1200)
 tracker.add_expenses("Travel",800)
 tracker.add_expenses("Books",1500)
-tracker.display_expenses()                                  
+tracker.display_expenses()  
+#concept:The Tracker group expense storage,display,and calculation                                
 
         
  
