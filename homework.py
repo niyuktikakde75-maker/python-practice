@@ -1104,37 +1104,69 @@
 
 #53.
 #create an inventory management system.
-class Inventory:
+# class Inventory:
+#     def __init__(self):
+#         self.products = {}
+
+#     def add_product(self,name,quantity):
+#         if name in self.products:
+#             self.products[name]+= quantity
+#         else:
+#             self.products[name] = quantity
+#         print("Product added Successfully") 
+
+#     def sell_product(self,name,quantity):
+#         if name not in self.products:
+#             print("Product not found")
+#         elif quantity > self.products[name]:
+#             print("Insufficient stock")
+#         else:
+#             self.products[name]-=quantity
+#             print("Product sold successfully")    
+
+#     def display_stock(self):
+#         print("n\Available stock")
+#         for name, quantity in self.products.items():
+#             print(name,"-",quantity) 
+
+# inventory = Inventory() 
+# inventory.add_product("Mouse",20)
+# inventory.add_product("Keyboard",10)
+# inventory.sell_product("Mouse",5)
+# inventory.display_stock()    
+#concept:A dictionary is suitable for mapping product name and quantity.  
+# 
+# 
+# 
+# 
+# 54
+# Create an expense tracker.
+class ExpenseTracker:
     def __init__(self):
-        self.products = {}
+        self.expenses = []
 
-    def add_product(self,name,quantity):
-        if name in self.products:
-            self.products[name]+= quantity
-        else:
-            self.products[name] = quantity
-        print("Product added Successfully") 
+    def add_expenses(self,categoy,amount):
+        self.expenses.append({
+            "category":categoy,
+            "amount":amount
+        })
+    def calculate_total(self):
+        total = 0
+        for expense in self.expenses:
+            total += expense["amount"]
+        return total
 
-    def sell_product(self,name,quantity):
-        if name not in self.products:
-            print("Product not found")
-        elif quantity > self.products[name]:
-            print("Insufficient stock")
-        else:
-            self.products[name]-=quantity
-            print("Product sold successfully")    
+    def display_expenses(self):
+        print("Expense Details")
+        for expense in self.expenses:
+            print(expense["category"],"-",expense["amount"])   
+        print("Total Expenses",self.calculate_total())   
 
-    def display_stock(self):
-        print("n\Available stock")
-        for name, quantity in self.products.items():
-            print(name,"-",quantity) 
-
-inventory = Inventory() 
-inventory.add_product("Mouse",20)
-inventory.add_product("Keyboard",10)
-inventory.sell_product("Mouse",5)
-inventory.display_stock()    
-#concept:A dictionary is suitable for mapping product name and quantity.                            
+tracker = ExpenseTracker()
+tracker.add_expenses("Food",1200)
+tracker.add_expenses("Travel",800)
+tracker.add_expenses("Books",1500)
+tracker.display_expenses()                                  
 
         
  
